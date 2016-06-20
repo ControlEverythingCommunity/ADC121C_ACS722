@@ -10,7 +10,7 @@
 // ADC121C_ACS714 I2C address is 0x50(80)
 #define Addr 0x50
 
-float current = 0.0;
+double current = 0.0;
 void setup()
 {
   // Set the variable
@@ -61,7 +61,7 @@ void loop()
 
   // Output data to serial monitor
   Particle.publish("Instantaneous Current value : ", String(current));
-  delay(500);
+  delay(1000);
 }
 
 
